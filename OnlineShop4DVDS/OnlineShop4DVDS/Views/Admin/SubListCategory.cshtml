@@ -1,0 +1,39 @@
+﻿@model IEnumerable<OnlineShop4DVDS.Models.tbl_SubCategory>
+
+@{
+    ViewBag.Title = "SubListCategory";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>SubListCategory</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tbl_Category.CatName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tbl_Category.CatName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "SubCatEdit", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "SubCatDelete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

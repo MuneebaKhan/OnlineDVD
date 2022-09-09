@@ -1,0 +1,101 @@
+﻿@model IEnumerable<OnlineShop4DVDS.Models.tbl_Product>
+
+@{
+    ViewBag.Title = "ListProduct";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<style>
+    h2 {
+        text-align: center;
+        color: black;
+        font-weight: 800;
+        font-size: 45px;
+    }
+
+    p {
+        text-align: center;
+    }
+
+        p a {
+            text-decoration: none;
+            color: #cc3333;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+    table tbody tr th {
+        color: black;
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    table tbody tr td {
+        color: black;
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+        table tbody tr td a {
+            text-decoration: none;
+            color: #cc3333;
+            font-size: 18px;
+            font-weight: 700;
+        }
+</style>
+
+<div style="height:100vh;">
+    <h2>Product List</h2>
+
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductDesc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductImage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.tbl_SubCategory.Name)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductDesc)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductPrice)
+                </td>
+                <td>
+                    <img src="../images/@item.ProductImage" width="50px" height="50px" />
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.tbl_SubCategory.Name)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "ProdEdit", new { id = item.ProductId }) |
+                   
+                    @Html.ActionLink("Delete", "ProdDelete", new { id = item.ProductId })
+                </td>
+            </tr>
+        }
+
+    </table>
+
+</div>

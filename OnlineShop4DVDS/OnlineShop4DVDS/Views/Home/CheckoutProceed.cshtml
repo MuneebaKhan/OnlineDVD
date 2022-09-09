@@ -1,0 +1,88 @@
+﻿
+@{
+    ViewBag.Title = "CheckoutProceed";
+}
+
+<style>
+    h2 {
+        text-align: center;
+        font-weight: 500;
+        text-decoration: underline;
+        margin: 70px 0 70px 0px;
+    }
+
+    .form-control {
+        border: 1px solid #cc3333;
+    }
+
+    form table tbody tr td label {
+        color: #cc3333;
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    .btn-info {
+        color: #fff;
+        background-color: #cc3333;
+        border-color: white;
+    }
+
+        .btn-info:hover {
+            color: #cc3333;
+            background-color: transparent;
+            border: 1px solid #cc3333;
+        }
+</style>
+
+<h2>CheckoutProceed</h2>
+@*<p>@Session["Email"]</p>*@
+
+
+<div class="container">
+    <input type="text" id="country" name="id" value='@Session["Email"]' readonly class="form-control">
+
+    @using (Html.BeginForm("CheckoutProceed", "Home", FormMethod.Post))
+    {
+        <table class="table table-borderedless">
+            <tr>
+
+                <td>@Html.TextBox("contact", "", new { @class = "form-control", placeholder = "Contact Number" })</td>
+            </tr>
+            <tr>
+
+                <td>@Html.TextBox("address", "", new { @class = "form-control", placeholder = "address" })</td>
+            </tr>
+            <tr>
+
+                <td>@Html.Label("PaymentType", new { @class = "a" })</td>
+                <td>
+                    @Html.RadioButton("Pay", "Cash")<span> Cash</span>
+                    @Html.RadioButton("Pay", "Credit")<span> Credit</span>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td></td>
+                <td><input type="submit" class="btn btn-info" value="Submit" /></td>
+            </tr>
+            @*<tr>
+                    <td>
+                        <p>@ViewBag.name</p>
+                        <p>@ViewBag.pass</p>
+                        <p>@ViewBag.email</p>
+                        <p>@ViewBag.dob</p>
+                        <p>@ViewBag.gender</p>
+                        <p>@ViewBag.comments</p>
+
+
+                    </td>
+
+                </tr>*@
+
+        </table>
+    }
+</div>
+
+@{ Html.EndForm();}
+

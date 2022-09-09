@@ -1,0 +1,494 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>HypeZone</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="~/css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/animate.css">
+
+    <link rel="stylesheet" href="~/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="~/css/magnific-popup.css">
+
+    <link rel="stylesheet" href="~/css/aos.css">
+
+    <link rel="stylesheet" href="~/css/ionicons.min.css">
+
+    <link rel="stylesheet" href="~/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="~/css/jquery.timepicker.css">
+
+    <link rel="stylesheet" href="~/css/flaticon.css">
+    <link rel="stylesheet" href="~/css/icomoon.css">
+    <link rel="stylesheet" href="~/css/style.css">
+</head>
+<style>
+    /*#edit {
+        background-color: #cc3333 !important;
+    }*/
+
+    .bg-dark {
+        background-color: white !important;
+    }
+
+    .ftco-navbar-light.scrolled .nav-item.cta > a {
+        background-color: #cc3333 !important;
+    }
+
+    #ftco-nav ul li {
+        position: relative;
+    }
+
+    #ftco-nav ul li:hover .sub-main {
+        height: 600px;
+        visibility: visible;
+        opacity: 1;
+    }
+
+        #ftco-nav ul li:hover .sub-menu {
+            height: 100px;
+            visibility: visible;
+            opacity: 1;
+        }
+
+
+        .sub-main {
+            position: absolute;
+            top: 42px;
+            left: -60px;
+            display: flex;
+            box-shadow: 1px 0px 9px 3px #0000002e;
+            background-color: white;
+            padding: 30px 80px;
+            width: 660px;
+            height: 0px;
+            visibility: hidden;
+            opacity: 0;
+            overflow: overlay;
+            transition: .2s all;
+        }
+
+    .sub-main .sub-box {
+        margin: 0px 30px;
+    }
+
+        .sub-main .sub-box .sub-menu-1:nth-child(2) {
+            margin: 20px 0;
+        }
+
+        .sub-main .sub-box .sub-menu-1 h1 {
+            margin: 0 0 22px 0;
+            font-size: 25px;
+            position: relative;
+        }
+
+            .sub-main .sub-box .sub-menu-1 h1::after {
+                content: "";
+                background-color: #85858555;
+                width: 60%;
+                height: .1px;
+                position: absolute;
+                bottom: -10px;
+                left: 0;
+            }
+
+        .sub-main .sub-box .sub-menu-1 ul {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            list-style: none;
+            flex-flow: column;
+        }
+
+            .sub-main .sub-box .sub-menu-1 ul li {
+                margin-left: -18px;
+            }
+
+                .sub-main .sub-box .sub-menu-1 ul li a {
+                    text-decoration: none;
+                    color: #737373;
+                    transition: .4s all;
+                    padding: 10px 18px;
+                    font-size: 15px;
+                }
+
+                    .sub-main .sub-box .sub-menu-1 ul li a:hover {
+                        color: #cc3333;
+                    }
+
+        .sub-main .sub-box .sub-menu-2 {
+            margin-top: 70px;
+        }
+
+            .sub-main .sub-box .sub-menu-2 h1 {
+                margin: 0 0 22px 0;
+                font-size: 25px;
+                position: relative;
+            }
+
+                .sub-main .sub-box .sub-menu-2 h1::after {
+                    content: "";
+                    background-color: #85858555;
+                    width: 100%;
+                    height: 1px;
+                    position: absolute;
+                    bottom: -10px;
+                    left: 0;
+                }
+
+            .sub-main .sub-box .sub-menu-2 ul {
+                margin: 0;
+                padding: 0;
+                display: flex;
+                list-style: none;
+                flex-flow: column;
+            }
+
+                .sub-main .sub-box .sub-menu-2 ul li {
+                    margin-left: -18px;
+                }
+
+                    .sub-main .sub-box .sub-menu-2 ul li a {
+                        text-decoration: none;
+                        color: #737373;
+                        transition: .4s all;
+                        padding: 10px 18px;
+                        font-size: 15px;
+                    }
+
+                        .sub-main .sub-box .sub-menu-2 ul li a:hover {
+                            color: #cc3333;
+                        }
+
+    .sub-menu {
+        margin: 0;
+        list-style: none;
+        width: 120px;
+        text-align: left;
+        background-color: white;
+        box-shadow: 1px 0px 9px 3px #0000002e;
+        padding: 10px 0px 10px 5px;
+        position: absolute;
+        right: -25%;
+        flex-flow: column;
+        top: 42px;
+        height: 0;
+        visibility: hidden;
+        opacity: 0;
+        transition: .4s all;
+    }
+
+    .sub-menu li a {
+        text-decoration: none;
+        color: black;
+        transition: .4s all;
+        font-size: 15px;
+    }
+
+      .sub-menu li a:hover {
+            color: #cc3333;
+        }
+
+
+    .ftco-navbar-light.scrolled .nav-item.active > a {
+        color:  black !important;
+    }
+</style>
+<body>
+    <div class="py-1 bg-primary" style="background-color: #cc3333 !important;">
+        <div class="container">
+            <div class="row no-gutters d-flex align-items-start align-items-center px-md-0">
+                <div class="col-lg-12 d-block">
+                    <div class="row d-flex">
+                        <div class="col-md pr-4 d-flex topper align-items-center">
+                            <div class="icon mr-2 d-flex justify-content-center align-items-center"><span class="icon-phone2"></span></div>
+                            <span class="text">+ 1235 2355 98</span>
+                        </div>
+                        <div class="col-md pr-4 d-flex topper align-items-center">
+                            <div class="icon mr-2 d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
+                            <span class="text">youremail@email.com</span>
+                        </div>
+                        <div class="col-md-5 pr-4 d-flex topper align-items-center text-lg-right">
+                            <span class="text">3-5 Business days delivery &amp; Free Returns</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light" id="ftco-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="@Url.Action("Index","Home")"><img src="~/images/logo/logo.png" / style="width:50%;"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="oi oi-menu"></span> Menu
+            </button>
+
+            <div class="collapse navbar-collapse" id="ftco-nav">
+
+                @if (!(User.Identity.IsAuthenticated))
+                {
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active"><a href="@Url.Action("Index","Home")" class="nav-link">Home</a></li>
+                        <li class="nav-item active">
+                            <a href="index.html" class="nav-link"> Category </a>
+                            <!-- CATEGORY-MENU -->
+                            <div class="sub-main">
+                                <div class="sub-box">
+                                    <div class="sub-menu-1">
+                                        <h1> Music </h1>
+                                        <ul>
+                                            <li><a href="#"> Popular Music </a></li>
+                                            <li><a href="#"> Classical Music </a></li>
+                                            <li><a href="#"> Rock </a></li>
+                                            <li><a href="#"> Pop Music </a></li>
+                                            <li><a href="#"> Hiphop Music </a></li>
+                                            <li><a href="#"> Dance Music </a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="sub-menu-2">
+                                        <h1> Albums </h1>
+                                        <ul>
+                                            <li><a href="#"> The Smiths </a></li>
+                                            <li><a href="#"> The Beatles </a></li>
+                                            <li><a href="#"> Pixies </a></li>
+                                            <li><a href="#"> Pop Music </a></li>
+                                            <li><a href="#"> Nirvana </a></li>
+                                            <li><a href="#"> Public Enemy </a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="sub-box">
+                                    <div class="sub-menu-1">
+                                        <h1> Movies </h1>
+                                        <ul>
+                                            <li><a href="#"> Action </a></li>
+                                            <li><a href="#"> Comedy </a></li>
+                                            <li><a href="#"> Drama </a></li>
+                                            <li><a href="#"> Fantasy </a></li>
+                                            <li><a href="#"> Horror </a></li>
+                                            <li><a href="#"> Mystery </a></li>
+                                            <li><a href="#"> Romance </a></li>
+                                            <li><a href="#"> Thriller </a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="sub-menu-1">
+                                        <h1> Games </h1>
+                                        <ul>
+                                            <li><a href="#"> Sandbox </a></li>
+                                            <li><a href="#"> Real-time Strategy </a></li>
+                                            <li><a href="#"> Multiplayer online battle arena </a></li>
+                                            <li><a href="#"> Role-playing </a></li>
+                                            <li><a href="#"> Simulation and sports </a></li>
+                                            <li><a href="#"> Puzzlers and party games </a></li>
+                                            <li><a href="#"> Action-adventure </a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item active">
+                            <a href="index.html" class="nav-link">Product</a>
+                            <!-- SHOP-MENU -->
+                            <ul class="sub-menu">
+                                <li><a href="#"> Movies DVD </a></li>
+                                <li><a href="#"> Music DVD </a></li>
+                                <li><a href="#"> Game DVD </a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a href="@Url.Action("About","Home")" class="nav-link">About</a></li>
+
+                        <li class="nav-item"><a href="@Url.Action("Contact","Home")" class="nav-link">Contact</a></li>
+
+
+                        <li class="nav-item"><a href="@Url.Action("Registration","Account")" class="nav-link" id="myBtn6">Register</a></li>
+                        <li class="nav-item"><a href="@Url.Action("Login","Account")" class="nav-link" id="myBtn5">Login</a></li>
+
+                        <li class="nav-item cta cta-colored"><a href="@Url.Action("Checkout","Home")" class="nav-link" id="edit"><span class="icon-shopping_cart"></span>@Session["item_count"]</a></li>
+
+                    </ul>
+                }
+
+                @if (User.Identity.IsAuthenticated)
+                {
+
+                    if (User.IsInRole("V"))
+                    {
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item active"><a href="index.html" class="nav-link">Welcome (@Session["User"])</a></li>
+                            <li class="nav-item active"><a href="index.html" class="nav-link">View Products</a></li>
+
+                            <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+
+                            <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+
+
+                            <li class="nav-item active"><a href="@Url.Action("Orders", "Home", new {id = @Session["Uid"]})" class="nav-link">Orders</a></li>
+                            <li class="nav-item cta cta-colored"><a href="@Url.Action("Checkout","Home")" class="nav-link"><span class="icon-shopping_cart"></span>@Session["item_count"]</a></li>
+
+
+                            <li class="nav-item"><a href="@Url.Action("Logout","Account")" class="nav-link">Logout</a></li>
+                        </ul>
+                    }
+
+
+
+                }
+
+
+            </div>
+        </div>
+    </nav>
+    <!-- END nav -->
+
+
+
+    @*<div class="container">*@
+        @RenderBody()
+    @*</div>*@
+
+
+
+
+    @*footer*@
+    <footer class="ftco-footer ftco-section">
+        <div class="container">
+            <div class="row">
+                <div class="mouse">
+                    <a href="#" class="mouse-icon" style="background-color: #cc3333 !important;">
+                        <div class="mouse-wheel"><span class="ion-ios-arrow-up"></span></div>
+                    </a>
+                </div>
+            </div>
+            <div class="row mb-5">
+                <div class="col-md">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="ftco-heading-2">HypeZone</h2>
+                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
+                        <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                            <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                            <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                            <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="ftco-footer-widget mb-4 ml-md-5">
+                        <h2 class="ftco-heading-2">Menu</h2>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="py-2 d-block">Product</a></li>
+                            <li><a href="@Url.Action("About", "Home")" class="py-2 d-block">About</a></li>
+                            <li><a href="@Url.Action("Login", "Account")" class="py-2 d-block">Login</a></li>
+                            <li><a href="@Url.Action("Contact", "Home")" class="py-2 d-block">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="ftco-heading-2">Help</h2>
+                        <div class="d-flex">
+                            <ul class="list-unstyled mr-l-5 pr-l-3 mr-4">
+                                <li><a href="#" class="py-2 d-block">Shipping Information</a></li>
+                                <li><a href="#" class="py-2 d-block">Returns &amp; Exchange</a></li>
+                                <li><a href="#" class="py-2 d-block">Terms &amp; Conditions</a></li>
+                                <li><a href="#" class="py-2 d-block">Privacy Policy</a></li>
+                            </ul>
+                            <ul class="list-unstyled">
+                                <li><a href="#" class="py-2 d-block">FAQs</a></li>
+                                <li><a href="#" class="py-2 d-block">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="ftco-heading-2">Have a Questions?</h2>
+                        <div class="block-23 mb-3">
+                            <ul>
+                                <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
+                                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
+                                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+
+                    <p>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        Copyright &copy;
+                        <script>document.write(new Date().getFullYear());</script> All rights reserved | 
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- loader -->
+    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" /><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00" /></svg></div>
+
+
+
+
+
+    <!--Sign up Modal Code-->
+
+    @*<div class="modal fade" id="modal-signup" role="dialog">
+        @Html.Action("Register", "Account")
+    </div>*@
+
+
+    <!--Sign In Modal Code-->
+    <!--Sign In Modal Code-->
+    @*<div class="modal fade" id="myModal" role="dialog">
+        @Html.Action("Login", "Account")
+    </div>*@
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#myBtn6").click(function () {
+                $("#modal-signup").modal();
+            });
+        });
+
+        $(document).ready(function () {
+            $("#myBtn5").click(function () {
+                $("#myModal").modal();
+            });
+        });
+
+
+    </script>
+
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="~/js/popper.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/jquery.easing.1.3.js"></script>
+    <script src="~/js/jquery.waypoints.min.js"></script>
+    <script src="~/js/jquery.stellar.min.js"></script>
+    <script src="~/js/owl.carousel.min.js"></script>
+    <script src="~/js/jquery.magnific-popup.min.js"></script>
+    <script src="~/js/aos.js"></script>
+    <script src="~/js/jquery.animateNumber.min.js"></script>
+    <script src="~/js/bootstrap-datepicker.js"></script>
+    <script src="~/js/scrollax.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    <script src="~/js/google-map.js"></script>
+    <script src="~/js/main.js"></script>
+
+
+
+
+
+
+</body>
+</html>

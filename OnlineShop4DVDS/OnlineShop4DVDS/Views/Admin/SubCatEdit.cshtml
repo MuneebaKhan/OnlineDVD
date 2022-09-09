@@ -1,0 +1,98 @@
+﻿@model OnlineShop4DVDS.Models.tbl_SubCategory
+
+@{
+    ViewBag.Title = "AddCategory";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<style>
+    h2 {
+        text-align: center;
+        color: black;
+        font-weight: 800;
+        font-size: 45px;
+    }
+
+    .form-group {
+        margin: 30px 0;
+    }
+
+        .form-group label {
+            color: black;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .form-group input {
+            padding: 30px 10px;
+            border: 2px solid #cc3333;
+        }
+
+        .form-group select {
+            padding: 0px 10px;
+            border: 2px solid #cc3333;
+        }
+
+        .form-group .btn-two {
+            border: none;
+            background-color: #cc3333;
+            color: white;
+            padding: 12px 45px;
+            font-size: 20px;
+        }
+
+    .img-box {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+        .img-box img {
+            width: 100%;
+            height: 750px;
+            object-fit: cover;
+        }
+</style>
+
+<div style="height: 130vh; ">
+    <h2>AddCategory</h2>
+
+
+    @using (Html.BeginForm("SubCatEdit", "Admin", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+
+<div class="form-horizontal" style="margin: 22px 100px;">
+    <hr />
+
+    @Html.HiddenFor(model => model.Id);
+
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group">
+        @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-md-2">Select Category</label>
+        <div class="col-md-10">
+            @Html.DropDownListFor(model => model.CategoryId, ViewBag.CatList as SelectList, "--- Select Category ---", htmlAttributes: new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.CategoryId, "", new { @class = "text-danger" })
+        </div>
+
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Create" class="btn-two" />
+        </div>
+    </div>
+</div>
+
+        <div class="img-box">
+            <img src="~/images/processing.jpg" />
+        </div>
+    }
+</div>
+

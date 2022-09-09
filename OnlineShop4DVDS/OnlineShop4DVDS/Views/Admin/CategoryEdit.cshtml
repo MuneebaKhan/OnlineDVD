@@ -1,0 +1,80 @@
+﻿@model OnlineShop4DVDS.Models.tbl_Category
+
+
+@{
+    ViewBag.Title = "MainCat";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<style>
+    .form-group {
+        margin-left: 100px;
+    }
+
+        .form-group label {
+            color: black;
+            font-size: 20px;
+        }
+
+        .form-group .form-control {
+            color: black;
+            border: 2px solid #cc3333;
+            padding: 30px 10px;
+        }
+
+        .form-group .btn-two {
+            color: white;
+            font-weight: 800;
+            font-size: 20px;
+            background-color: #cc3333;
+            padding: 10px 30px;
+            border-radius: 5px;
+            border: none;
+        }
+
+    .img-box {
+        width: 50%;
+        margin: 50px auto;
+    }
+
+        .img-box img {
+            width: 100%;
+        }
+</style>
+
+<div style="height: 100vh; ">
+    <h2 style="text-align: center; color: black; font-weight: 800; font-size: 45px;">MainCategory Edit</h2>
+
+    @using (Html.BeginForm("CategoryEdit", "Admin", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+    <hr />
+
+    @Html.HiddenFor(model => model.CatId);
+
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group">
+        @Html.LabelFor(model => model.CatName, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.CatName, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.CatName, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Create" class="btn-two" />
+        </div>
+    </div>
+</div>
+
+        <div class="img-box">
+            <img src="~/images/process.png" />
+        </div>
+    }
+
+</div>
+
+
+

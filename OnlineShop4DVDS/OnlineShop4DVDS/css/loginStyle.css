@@ -1,0 +1,109 @@
+﻿body {
+    background-color: #cc3333;
+}
+
+.form-sec {
+    position: relative;
+    z-index: 111;
+    background-color: white;
+    padding: 20px 20px;
+    width: 65%;
+    border-radius: 15px;
+    margin: 80px auto;
+}
+
+
+    .form-sec .main-box {
+        padding: 0 20px;
+    }
+
+
+        .form-sec .main-box .title-box h1 {
+            text-align: center;
+            font-size: 40px;
+            font-weight: 900;
+            margin: 50px 0;
+            position: relative;
+        }
+
+            .form-sec .main-box .title-box h1::after {
+                content: "";
+                background-color: #cc3333;
+                width: 20%;
+                height: 2px;
+                position: absolute;
+                bottom: -7px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .form-sec .main-box .form-box {
+                margin: 30px 0;
+                width: 100%;
+            }
+
+            .form-sec .main-box .form-box .box-1 {
+                position: relative;
+                transition: .4s all;
+                width: 100%;
+            }
+
+                .form-sec .main-box .form-box .box-1 .ip-1 {
+                    width: 100%;
+                    border: none;
+                    border-bottom: 2px solid #adadad;
+                    outline: none;
+                    margin: 40px 0;
+                    font-size: 17px;
+                    max-width: none;
+                    padding: 10px 0;
+                }
+
+                    .form-sec .main-box .form-box .box-1 .ip-1:focus + .lbl-1 {
+                        top: 20px;
+                    }
+
+                    .form-sec .main-box .form-box .box-1 .ip-1:valid ~ .lbl-1 {
+                        top: 20px;
+                    }
+
+                .form-sec .main-box .form-box .box-1 .fline {
+                    background: linear-gradient(45deg, #e53935, #ef7070);
+                    position: absolute;
+                    bottom: 40px;
+                    left: 0;
+                    width: 0%;
+                    height: 2px;
+                    transition: 0.4s all;
+                }
+
+                .form-sec .main-box .form-box .box-1 .ip-1:focus ~ .fline {
+                    width: 100%;
+                }
+
+                .form-sec .main-box .form-box .box-1 .lbl-1 {
+                    position: absolute;
+                    top: 50px;
+                    left: 0;
+                    margin: 0;
+                    color: #adadad;
+                    font-weight: 200;
+                    font-size: 17px;
+                    pointer-events: none;
+                    transition: .4s all;
+                }
+
+            .form-sec .main-box .form-box .btn-box {
+                text-align: center;
+            }
+
+                .form-sec .main-box .form-box .btn-box .btn-1 {
+                    padding: 12px 10px;
+                    width: 30%;
+                    background: linear-gradient(-135deg, #d5007d, #e53935, #d5007d, #e53935);
+                    color: white;
+                    border: none;
+                    font-size: 22px;
+                    margin-top: 20px;
+                    cursor: pointer;
+                }

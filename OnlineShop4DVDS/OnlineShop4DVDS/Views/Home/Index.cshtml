@@ -1,0 +1,300 @@
+﻿@model IEnumerable<OnlineShop4DVDS.Models.tbl_Product>
+@{
+    ViewBag.Title = "Index";
+}
+<style>
+    .btn.btn-primary:hover {
+        color: white !important;
+    }
+
+    .ftco-services .services:hover .icon, .ftco-services .services:focus .icon {
+        background: #cc3333 !important;
+    }
+
+    .ftco-category .category-wrap .text {
+        background-color: #cc3333 !important;
+    }
+
+    .product .img-prod span.status {
+            background: #cc3333 !important;
+    }
+
+    .product .text h4 a {
+        color: #cc3333 !important;
+    }
+
+    .product .text p.price span.price-sale {
+        color: #cc3333 !important;
+    }
+
+    .product .text .bottom-area a {
+        background-color: #cc3333 !important;
+    }
+</style>
+
+@*Carousel Section*@
+<section id="home-section" class="hero">
+    <div class="home-slider owl-carousel">
+        <div class="slider-item" style="background-image: url(../images/b-1.png); ">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
+
+                    <div class="col-md-12 ftco-animate text-center">
+                        <h1 class="mb-2">WATCH MOVIES</h1>
+                        <h2 class="subheading mb-4"> Buy DVD's of new upcoming movies </h2>
+                        <p><a href="#" class="btn btn-primary" style="background: #cc3333; border: none;"> View More </a></p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="slider-item" style="background-image: url(../images/banner/b-2.png);">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
+
+                    <div class="col-sm-12 ftco-animate text-center">
+                        <h1 class="mb-2">PLAY MUSIC</h1>
+                        <h2 class="subheading mb-4"> Listen free music and enjoy </h2>
+                        <p><a href="#" class="btn btn-primary" style="background: #cc3333; border: none;">View More</a></p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="slider-item" style="background-image: url(../images/banner/b-3.png);">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
+
+                    <div class="col-sm-12 ftco-animate text-center">
+                        <h1 class="mb-2"> PLAY GAMES </h1>
+                        <h2 class="subheading mb-4"> Enojoy the best game experience with us </h2>
+                        <p><a href="#" class="btn btn-primary" style="background: #cc3333; border: none;">View More</a></p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@*Shipping Section*@
+
+<section class="ftco-section">
+    <div class="container">
+        <div class="row no-gutters ftco-services">
+            <div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
+                <div class="media block-6 services mb-md-0 mb-4">
+                    <div class="icon bg-color-1 active d-flex justify-content-center align-items-center mb-2">
+                        <span class="flaticon-shipped"></span>
+                    </div>
+                    <div class="media-body">
+                        <h3 class="heading">Free Shipping</h3>
+                        <span>On order over $100</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
+                <div class="media block-6 services mb-md-0 mb-4">
+                    <div class="icon bg-color-2 d-flex justify-content-center align-items-center mb-2">
+                        <span class="flaticon-diet"></span>
+                    </div>
+                    <div class="media-body">
+                        <h3 class="heading">Always Fresh</h3>
+                        <span>Product well package</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
+                <div class="media block-6 services mb-md-0 mb-4">
+                    <div class="icon bg-color-3 d-flex justify-content-center align-items-center mb-2">
+                        <span class="flaticon-award"></span>
+                    </div>
+                    <div class="media-body">
+                        <h3 class="heading">Superior Quality</h3>
+                        <span>Quality Products</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
+                <div class="media block-6 services mb-md-0 mb-4">
+                    <div class="icon bg-color-4 d-flex justify-content-center align-items-center mb-2">
+                        <span class="flaticon-customer-service"></span>
+                    </div>
+                    <div class="media-body">
+                        <h3 class="heading">Support</h3>
+                        <span>24/7 Support</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+@*Category Section*@
+<section class="ftco-section ftco-category ftco-no-pt">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-md-6 order-md-last align-items-stretch d-flex">
+                        <div class="category-wrap-2 ftco-animate img align-self-stretch d-flex" style="background-image: url(../images/cat-4.png);">
+                            <div class="text text-center">
+                                <h2 style="color: #cc3333 !important;">Categories</h2>
+                                <p>We have everything you want</p>
+                                <p><a href="#" class="btn btn-primary" style="background-color: #cc3333; border: 2px solid #cc3333;">Shop now</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="category-wrap ftco-animate img mb-4 d-flex align-items-end" style="background-image: url(../images/cat-1.png);">
+                            <div class="text px-3 py-1">
+                                <h2 class="mb-0"><a href="#">Movies</a></h2>
+                            </div>
+                        </div>
+                        <div class="category-wrap ftco-animate img d-flex align-items-end" style="background-image: url(../images/cat-2.jfif);">
+                            <div class="text px-3 py-1">
+                                <h2 class="mb-0"><a href="#">Albums</a></h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="category-wrap ftco-animate img mb-4 d-flex align-items-end" style="background-image: url(../images/cat-3.png);">
+                    <div class="text px-3 py-1">
+                        <h2 class="mb-0"><a href="#">Songs</a></h2>
+                    </div>
+                </div>
+                <div class="category-wrap ftco-animate img d-flex align-items-end" style="background-image: url(../images/cat-5.jpg);">
+                    <div class="text px-3 py-1">
+                        <h2 class="mb-0"><a href="#">Games</a></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+@* PROMOTION SECTION *@
+
+@*Carousel Section*@
+<section id="home-section" class="hero">
+    <div class="home-slider owl-carousel">
+        <div class="slider-item" style="background-image: url(../images/prom-1png.png);">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
+
+                    <div class="col-md-12 ftco-animate text-center">
+                        <h1 class="mb-2"> SONG COLLECTION </h1>
+                        <h2 class="subheading mb-4"> Latest song released today download it for free </h2>
+                        <p><a href="#" class="btn btn-primary" style="background: #cc3333; border: none;"> View More </a></p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="slider-item" style="background-image: url(../images/prom-2.jpg);">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
+
+                    <div class="col-sm-12 ftco-animate text-center">
+                        <h1 class="mb-2"> GAMES COLLECTION </h1>
+                        <h2 class="subheading mb-4"> Play new hd graphic games! </h2>
+                        <p><a href="#" class="btn btn-primary" style="background: #cc3333; border: none;">View More</a></p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="slider-item" style="background-image: url(../images/prom-3.png);">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
+
+                    <div class="col-sm-12 ftco-animate text-center">
+                        <h1 class="mb-2"> MOVIES ENTERTAINMENT </h1>
+                        <h2 class="subheading mb-4"> Watch your favorite movies with your love ones! </h2>
+                        <p><a href="#" class="btn btn-primary" style="background: #cc3333; border: none;">View More</a></p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+@*Products Section*@
+
+
+<section class="ftco-section">
+    <div class="container">
+        <div class="row justify-content-center mb-3 pb-3">
+            <div class="col-md-12 heading-section text-center ftco-animate">
+                <span class="subheading" style="color: #cc3333 !important;">Featured Products</span>
+                <h2 class="mb-4">Our Products</h2>
+                <p>We have latest collection of game, movies, songs and albums DVD's buy it in reasonable price</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            @foreach (var item in Model)
+            {
+
+
+                <div class="col-md-6 col-lg-3 ftco-animate">
+                    <div class="product">
+                        <a href="@Url.Action("AddtoCart","Home", new {id = @item.ProductId})" class="img-prod">
+                            <img class="img-fluid" src="~/images/@item.ProductImage" alt="Colorlib Template" style="width:100%;height:150px;">
+                            <span class="status">30%</span>
+                            <div class="overlay"></div>
+                        </a>
+                        <div class="text py-3 pb-4 px-3 text-center">
+                            <h4><a href="#">@(item.tbl_SubCategory == null ? "NA" : item.tbl_SubCategory.Name.ToString())</a></h4>
+                            <h3><a href="#">@item.ProductName</a></h3>
+                            <div class="d-flex">
+                                <div class="pricing">
+                                    <p class="price"><span class="price-sale">RS(@item.ProductPrice)</span></p>
+                                </div>
+                            </div>
+                            <div class="bottom-area d-flex px-3">
+                                <div class="m-auto d-flex">
+                                    <a href="#" class="add-to-cart d-flex justify-content-center align-items-center text-center">
+                                        <span><i class="ion-ios-menu"></i></span>
+                                    </a>
+                                    <a href="@Url.Action("OnlineShop4DVDS","Home", new {id = @item.ProductId})" class="buy-now d-flex justify-content-center align-items-center mx-1">
+                                        <span><i class="ion-ios-cart"></i></span>
+                                    </a>
+                                    <a href="#" class="heart d-flex justify-content-center align-items-center ">
+                                        <span><i class="ion-ios-heart"></i></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            }
+
+
+        </div>
+    </div>
+</section>
+
+
+
